@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add ToDo</title>
+</head>
+<body>
+ <h1> Add ToDo form</h1>
+<form action="#" th:action="@{/ui/addTodo}" th:object="${todo}" method="post">
+    <p> Name: <input type="text" th:field="*{name}"></p>
+    <p> Description: <input type="text" th:field="*{description}"></p>
+    <p> <input type="submit" value="Submit"/></p>
+</form>
+</body>
+</html>
