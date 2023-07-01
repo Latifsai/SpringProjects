@@ -1,9 +1,6 @@
 package com.example.springprojects.project1.controllers;
 
-import com.example.springprojects.project1.core.AddToDoService;
-import com.example.springprojects.project1.core.FindAllToDoService;
-import com.example.springprojects.project1.core.FindByIService;
-import com.example.springprojects.project1.core.UpdateTodoService;
+import com.example.springprojects.project1.core.*;
 import com.example.springprojects.project1.dto.*;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +14,7 @@ public class ToDoController {
     private final FindAllToDoService findAllToDoService;
     private final FindByIService findByIService;
     private final UpdateTodoService updateTodoService;
+    private final DeleteByIdService deleteByIdService;
 
     @PostMapping()
     public AddToDoResponse add(@RequestBody AddToDoRequest request) {
@@ -39,5 +37,9 @@ public class ToDoController {
         updateTodoService.update(request);
     }
 
+    @DeleteMapping(value = "/{id}")
+    public DeleteByIDResponse delete(@PathVariable("id") Integer id) {
+        return deleteByIdService.deleteByID(id);
+    }
 
 }
