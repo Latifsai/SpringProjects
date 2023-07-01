@@ -5,7 +5,8 @@ import com.example.springprojects.project1.core.validation.CoreError;
 import com.example.springprojects.project1.domain.ToDoEntity;
 import com.example.springprojects.project1.dto.FindAllToDoResponse;
 import com.example.springprojects.project1.dto.ToDoDTO;
-import com.example.springprojects.project1.repository.ToDoRepository;
+import com.example.springprojects.project1.repository.newVar.RepositoryJPA;
+import com.example.springprojects.project1.repository.old.ToDoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,9 +14,9 @@ import java.util.List;
 
 @Service
 public class FindAllToDoService {
-    private ToDoRepository repository;
+    private RepositoryJPA repository;
 
-    public FindAllToDoService(ToDoRepository repository) {
+    public FindAllToDoService(RepositoryJPA repository) {
         this.repository = repository;
     }
 

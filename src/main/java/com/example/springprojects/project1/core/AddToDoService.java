@@ -6,7 +6,7 @@ import com.example.springprojects.project1.core.validation.*;
 import com.example.springprojects.project1.domain.ToDoEntity;
 import com.example.springprojects.project1.dto.AddToDoRequest;
 import com.example.springprojects.project1.dto.AddToDoResponse;
-import com.example.springprojects.project1.repository.ToDoRepository;
+import com.example.springprojects.project1.repository.newVar.RepositoryJPA;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,9 +14,9 @@ import java.util.ArrayList;
 @Service
 public class AddToDoService {
 
-    private ToDoRepository repository;
+    private RepositoryJPA repository;
 
-    public AddToDoService(ToDoRepository repository) {
+    public AddToDoService(RepositoryJPA repository) {
         this.repository = repository;
     }
 
@@ -26,12 +26,12 @@ public class AddToDoService {
 
 
 public AddToDoResponse add(AddToDoRequest request) {
-    validationRuleList.clear();
-    validationRuleList.add(new ToDoNameNullValidationRule());
-    validationRuleList.add(new ToDoNameMinLengthValidationRule());
-    validationRuleList.add(new ToDoNameMaxLengthValidationRule());
-    validationRuleList.add(new ToDoDescriptionNullValidationRule());
-    validationRuleList.add(new ToDoDescriptionMaxLengthValidationRule());
+//    validationRuleList.clear();
+//    validationRuleList.add(new ToDoNameNullValidationRule());
+//    validationRuleList.add(new ToDoNameMinLengthValidationRule());
+//    validationRuleList.add(new ToDoNameMaxLengthValidationRule());
+//    validationRuleList.add(new ToDoDescriptionNullValidationRule());
+//    validationRuleList.add(new ToDoDescriptionMaxLengthValidationRule());
 
     System.out.println("Received request " + request);
     var validationResult = validationService.validate(request);

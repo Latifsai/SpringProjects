@@ -1,16 +1,16 @@
 package com.example.springprojects.project1.core;
 
 import com.example.springprojects.project1.domain.ToDoEntity;
-import com.example.springprojects.project1.dto.ToDoDTO;
 import com.example.springprojects.project1.dto.UpdateTodoRequest;
-import com.example.springprojects.project1.repository.ToDoRepository;
+
+import com.example.springprojects.project1.repository.newVar.RepositoryJPA;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
 public class UpdateTodoService {
-    private final ToDoRepository repository;
+    private final RepositoryJPA repository;
 
     public void update(UpdateTodoRequest request) {
         repository.findById(request.getId())
