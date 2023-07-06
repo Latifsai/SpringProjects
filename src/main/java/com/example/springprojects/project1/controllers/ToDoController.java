@@ -1,7 +1,7 @@
 package com.example.springprojects.project1.controllers;
 
-import com.example.springprojects.project1.core.*;
-import com.example.springprojects.project1.dto.*;
+import com.example.springprojects.project1.core.service.todo.*;
+import com.example.springprojects.project1.dto.todo.*;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

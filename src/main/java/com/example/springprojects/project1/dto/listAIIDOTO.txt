@@ -1,0 +1,30 @@
+формы запросов / ответов
+
+- запрос на добавление нового пользователя:
+     private String userName;
+     private String password;
+     private String email;
+
+- ответ userResponse:
+    private Integer id;
+    private String name;
+    private String accessKey;
+    private List<CoreError> errors;
+
+- ответ на запрос findAllUsers:
+    private List<User> users;
+    private List<CoreError> errors;
+
+    /============= ToDO ===============/
+
+- запрос на добавление нового ToDO
+    private String name;
+    private String description;
+    private String accessKey;
+
+- ответ на добавление нового  ToDO
+    private Integer createdToDoId;
+    private List<CoreError> errors;
+    private LocalDateTime creationDate;
+    private UserResponse response;
+

@@ -1,6 +1,6 @@
-package com.example.springprojects.project1.core;
+package com.example.springprojects.project1.core.service.todo;
 
-import com.example.springprojects.project1.dto.DeleteByIDResponse;
+import com.example.springprojects.project1.dto.todo.DeleteByIDResponse;
 import com.example.springprojects.project1.repository.newVar.RepositoryJPA;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

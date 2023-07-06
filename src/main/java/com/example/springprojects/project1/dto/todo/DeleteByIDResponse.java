@@ -1,4 +1,4 @@
-package com.example.springprojects.project1.dto;
+package com.example.springprojects.project1.dto.todo;
 
 import com.example.springprojects.project1.core.validation.CoreError;
 import lombok.AllArgsConstructor;

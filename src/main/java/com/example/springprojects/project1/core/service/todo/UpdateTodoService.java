@@ -1,7 +1,7 @@
-package com.example.springprojects.project1.core;
+package com.example.springprojects.project1.core.service.todo;
 
 import com.example.springprojects.project1.domain.ToDoEntity;
-import com.example.springprojects.project1.dto.UpdateTodoRequest;
+import com.example.springprojects.project1.dto.todo.UpdateTodoRequest;
 
 import com.example.springprojects.project1.repository.newVar.RepositoryJPA;
 import lombok.AllArgsConstructor;

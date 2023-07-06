@@ -1,12 +1,11 @@
-package com.example.springprojects.project1.core;
+package com.example.springprojects.project1.core.service.todo;
 
 
 import com.example.springprojects.project1.core.validation.CoreError;
 import com.example.springprojects.project1.domain.ToDoEntity;
-import com.example.springprojects.project1.dto.FindAllToDoResponse;
-import com.example.springprojects.project1.dto.ToDoDTO;
+import com.example.springprojects.project1.dto.todo.FindAllToDoResponse;
+import com.example.springprojects.project1.dto.todo.ToDoDTO;
 import com.example.springprojects.project1.repository.newVar.RepositoryJPA;
-import com.example.springprojects.project1.repository.old.ToDoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -21,10 +20,6 @@ public class FindAllToDoService {
     }
 
     public FindAllToDoResponse findAll() {
-
-//        List<ToDoDTO> dtos = repository.findAll().stream()
-//                .map(this::convert)
-//                .toList();
 
         List<ToDoEntity> entities = repository.findAll();
         List<ToDoDTO> dtos = new ArrayList<>();
