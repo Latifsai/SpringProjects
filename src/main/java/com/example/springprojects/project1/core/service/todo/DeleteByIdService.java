@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 @AllArgsConstructor
 public class DeleteByIdService {
-    private RepositoryJPA repository;
+    private final RepositoryJPA repository;
 
     public DeleteByIDResponse deleteByID(Integer id) {
         if (repository.existsById(id)) {

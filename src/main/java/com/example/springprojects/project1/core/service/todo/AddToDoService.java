@@ -20,7 +20,6 @@ public class AddToDoService {
     private final Converters convert;
     public AddToDoResponse add(AddToDoRequest request) {
 
-
         var entity = convert.convertToEntity(request);
         entity.setCreationDate(LocalDateTime.now());
 

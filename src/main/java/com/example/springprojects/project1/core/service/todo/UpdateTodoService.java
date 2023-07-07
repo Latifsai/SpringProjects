@@ -1,8 +1,7 @@
 package com.example.springprojects.project1.core.service.todo;
 
-import com.example.springprojects.project1.domain.ToDoEntity;
+import com.example.springprojects.project1.domain.ToDo;
 import com.example.springprojects.project1.dto.todo.UpdateTodoRequest;
-
 import com.example.springprojects.project1.repository.newVar.RepositoryJPA;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,7 +17,7 @@ public class UpdateTodoService {
                 .ifPresent(repository::save);
     }
 
-    private ToDoEntity updateFields(ToDoEntity entity, UpdateTodoRequest request) {
+    private ToDo updateFields(ToDo entity, UpdateTodoRequest request) {
         entity.setName(request.getName());
         entity.setDescription(request.getDescription());
         entity.setId(request.getId());

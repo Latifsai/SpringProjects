@@ -12,7 +12,7 @@ public class ToDoController {
 
     private final AddToDoService addToDoService;
     private final FindAllToDoService findAllToDoService;
-    private final FindByIService findByIService;
+    private final FindByIDService findByIService;
     private final UpdateTodoService updateTodoService;
     private final DeleteByIdService deleteByIdService;
 
