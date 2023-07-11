@@ -17,7 +17,7 @@ public class ToDoController {
     private final DeleteByIdService deleteByIdService;
 
     @PostMapping()
-    public AddToDoResponse add(@RequestBody AddToDoRequest request) {
+    public ToDoResponse add(@RequestBody AddToDoRequest request) {
         return addToDoService.add(request);
     }
 
@@ -37,9 +37,6 @@ public class ToDoController {
         updateTodoService.update(request);
     }
 
-    @DeleteMapping(value = "/{id}")
-    public DeleteByIDResponse delete(@PathVariable("id") Integer id) {
-        return deleteByIdService.deleteByID(id);
-    }
+
 
 }

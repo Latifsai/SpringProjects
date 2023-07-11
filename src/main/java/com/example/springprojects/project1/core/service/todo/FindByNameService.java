@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -14,16 +15,18 @@ import java.util.List;
 public class FindByNameService {
     private final RepositoryJPA repository;
 
-    public List<ToDoDTO> findById(String name) {
-        List<ToDoDTO> dto = repository.findByName(name).stream()
+    // сделать рефоторинш медота сделать его красивым и грамотным
+    public List<ToDoDTO> findByName(String name) {
+        return repository.findByName(name).stream()
                 .map(this::convert)
-                .toList();
-
-        if (dto.isEmpty()) {
-            throw new IllegalArgumentException("Is not found!");
-        }
-        return dto;
+                .collect(Collectors.collectingAndThen(Collectors.toList(), list -> {
+                    if (list.isEmpty()){
+                        throw new IllegalArgumentException("Todo with name " + name + " is not found!");
+                    }
+                    return list;
+                }));
     }
+
 
     private ToDoDTO convert(ToDo entity) {
         return new ToDoDTO(entity.getName(), entity.getDescription(), entity.getCreationDate());
