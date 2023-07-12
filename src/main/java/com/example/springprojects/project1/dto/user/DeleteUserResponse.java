@@ -1,7 +1,6 @@
-package com.example.springprojects.project1.dto.todo;
+package com.example.springprojects.project1.dto.user;
 
 import com.example.springprojects.project1.core.validation.CoreError;
-import com.example.springprojects.project1.domain.ToDo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -9,7 +8,9 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-public class FindAllToDoResponse {
-    private List<ToDo> toDos;
+public class DeleteUserResponse {
+
+    private Integer id;
+    private String name;
     private List<CoreError> errors;
 }

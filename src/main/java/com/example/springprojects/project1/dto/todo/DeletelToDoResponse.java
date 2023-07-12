@@ -1,19 +1,15 @@
 package com.example.springprojects.project1.dto.todo;
 
-
-
 import com.example.springprojects.project1.core.validation.CoreError;
+import com.example.springprojects.project1.domain.ToDo;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
-public class ToDoResponse {
-    private Integer createdToDoId;
+@AllArgsConstructor
+public class DeletelToDoResponse {
+    private Integer id;
     private List<CoreError> errors;
-    private LocalDateTime creationDate;
-
 }

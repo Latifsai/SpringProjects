@@ -24,7 +24,7 @@ public class ToDo {
     @NotEmpty(message = "Must not be Empty!")
     private String description;
     private LocalDateTime creationDate;
-    @ManyToOne
+    @ManyToOne // много todo у одного user
     @JoinColumn(name = "to_do_author_id")
     private User toDoAuthor;
 }

@@ -1,7 +1,6 @@
 package com.example.springprojects.project1.controllers;
 
 import com.example.springprojects.project1.core.validation.CoreError;
-import com.example.springprojects.project1.dto.todo.ToDoResponse;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

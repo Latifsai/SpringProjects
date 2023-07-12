@@ -1,12 +1,13 @@
-package com.example.springprojects.project1.dto.todo;
+package com.example.springprojects.project1.dto.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+
 @Data
 @AllArgsConstructor
-public class AddToDoRequest {
+public class FindAllUsersRequest {
+
     private String name;
-    private String description;
     private String accessKey;
 }

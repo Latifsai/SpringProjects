@@ -5,8 +5,9 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class AddToDoRequest {
-    private String name;
-    private String description;
+public class UpdateToDoRequest {
+    private Integer id;
+    private String newName;
+    private String newDescription;
     private String accessKey;
 }

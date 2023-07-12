@@ -1,13 +1,11 @@
 package com.example.springprojects.project1.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 
 
@@ -24,6 +22,9 @@ public class User {
     @NotNull(message = "Name must not be null!")
     @Pattern(regexp = "^[a-zA-z][a-zA-z0-9]*$", message = " Incorrect name format! ")
     private String userName;
+
+    @NotNull(message = "Password be not null!")
+    @Size(min = 5, max = 10, message = "Password length must be between 5 and 10")
     private String password;
     @NotNull
     @Email
