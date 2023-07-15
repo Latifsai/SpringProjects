@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-public class FindAllToDoResponse {
-    private List<ToDoForClient> toDos;
+public class FindAllToDoResponseAdmin {
+    private List<ToDo> toDos;
     private List<CoreError> errors;
 }

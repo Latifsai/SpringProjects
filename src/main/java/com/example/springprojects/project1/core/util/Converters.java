@@ -3,6 +3,7 @@ package com.example.springprojects.project1.core.util;
 import com.example.springprojects.project1.domain.ToDo;
 import com.example.springprojects.project1.domain.User;
 import com.example.springprojects.project1.dto.todo.AddToDoRequest;
+import com.example.springprojects.project1.dto.todo.ToDoForClient;
 import com.example.springprojects.project1.dto.user.AddUserRequest;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,14 @@ public class Converters {
         entity.setName(request.getName());
         entity.setDescription(request.getDescription());
         return entity;
+    }
+
+    public ToDoForClient convertToDoRequestToToDoForClient(ToDo toDo) {
+        ToDoForClient client = new ToDoForClient();
+        client.setId(toDo.getId());
+        client.setName(toDo.getName());
+        client.setDescription(toDo.getDescription());
+        return client;
     }
 
 }
